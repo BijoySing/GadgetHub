@@ -95,7 +95,7 @@ const Header = () => {
         </div>
         <Link
           to="/"
-          className="normal-case font-bold text-4xl text-blue-900 hover:text-blue-500"
+          className="normal-case  font-bold text-xl lg:font-bold text-4xl text-blue-900 hover:text-blue-500"
           style={{ textDecoration: 'none' }}
         >
           Gadget<span className="text-red-500">Hub</span>
@@ -110,7 +110,7 @@ const Header = () => {
             <img className="w-[40px] lg:w-[50px] rounded-full " src={user.photoURL} alt="" />
             <p className="text-[1px] lg:text-[15px]">{user.email}</p>
           </div>
-            <button onClick={handleLogout} className="btn sign rounded-full">
+            <button onClick={handleLogout} className="text-red-500 lg: btn sign rounded-full">
               Log Out
             </button>
           </>

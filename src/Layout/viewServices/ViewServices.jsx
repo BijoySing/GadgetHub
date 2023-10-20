@@ -98,6 +98,7 @@ const ViewServices = () => {
                 </div>
 
             </div>
+            <h1 className='my-6 text-5xl font-bold'>Top Selling</h1>
             <hr />
             <div className="grid lg:grid-cols-2 gap-4">
                 {filteredServices.map((service) => (
@@ -118,14 +119,16 @@ const ViewServices = () => {
                                 <h1 className='text-red-900 bg-gray-300 rounded-md py-2 px-3'>Rating: {service.rating}/5.0</h1></div>
 
                                 <div className="card-actions flex justify-between">
-                                    <Link to={`updateProducts/${service._id}`}>
+                                    <Link to={`/updateProducts/${service._id}`}>
                                         <button
                                             // onClick={() => Navigate(`updateProducts/$service._id}`)}
                                             className="btn text-md px-3 text--500 bg-orange-400">
                                             Update info
                                         </button>
                                     </Link>
-                                    <button className="btn btn1 px-9 py-2 bg-blue-500">details</button>
+                                    <Link to={`/ProductInfo/${service._id}`}>
+                            <button className="btn btn1  bg-blue-500">Details</button>
+                        </Link>
                                 </div>
                             </div>
                         </div>

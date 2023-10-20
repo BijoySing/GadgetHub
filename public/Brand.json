@@ -4,15 +4,15 @@
         "name": "Apple",
         "image": "https://i.ibb.co/42r7T2Q/apple.png",
         "banner": {
-            "photo1": "https://i.ibb.co/1zQgRwq/4.jpg",
-            "photo2": "https://i.ibb.co/N9ctp61/a2.jpg",
-            "photo3": "https://i.ibb.co/3CHQ1gd/a1.jpg"
+            "photo1": "https://i.ibb.co/3CHQ1gd/a1.jpg",
+            "photo2": "https://i.ibb.co/1zQgRwq/4.jpg",
+            "photo3": "https://i.ibb.co/N9ctp61/a2.jpg"
         }
     },
     {
         "id": 2,
         "name": "Samsung",
-        "image": "https://i.ibb.co/Fm0qz0C/sam.jpg",
+        "image": "https://image.shutterstock.com/image-photo/image-260nw-2269709285.jpg",
         "banner": {
             "photo1": "https://i.ibb.co/Dkgvggz/s3.jpg",
             "photo2": "https://i.ibb.co/tpNjNmt/s2.jpg",
@@ -34,7 +34,7 @@
         "name": "Xiaomi",
         "image": "https://i.ibb.co/LtRwLW2/mi.png",
         "banner": {
-            "photo1": "https://i.ibb.co/R4XN9c8/3.jpg",
+            "photo1": "https://m.media-amazon.com/images/I/71LRY1j6UHL._AC_UF1000,1000_QL80_.jpg",
             "photo2": "https://i.ibb.co/Vq1MRgv/1.jpg",
             "photo3": "https://i.ibb.co/LkyXdP8/2.jpg"
         }
@@ -44,19 +44,19 @@
         "name": "Realme",
         "image": "https://www.livemint.com/rf/Image-621x414/LiveMint/Period2/2018/11/16/Photos/Home%20Page/GO%20(77)-kjmB--621x414@LiveMint.png",
         "banner": {
-            "photo1": "https://i.ibb.co/w4ZN8hk/2.jpg",
+            "photo3": "https://i.ibb.co/w4ZN8hk/2.jpg",
             "photo2": "https://i.ibb.co/mNn11c4/1.jpg",
-            "photo3": "https://i.ibb.co/85b60Lh/r1.png"
+            "photo1": "https://i.ibb.co/85b60Lh/r1.png"
         }
     },
     {
         "id": 6,
         "name": "LG",
-        "image": "https://i.ibb.co/y61cyZM/lg.png",
+        "image": "https://static.vecteezy.com/system/resources/previews/018/911/405/non_2x/lg-logo-life-s-good-editorial-free-vector.jpg",
         "banner": {
-            "photo1": "https://i.ibb.co/B3zjW1f/2.jpg",
+            "photo3": "https://ecom.rangs.com.bd/storage/8040/860X740-01.jpg",
             "photo2": "https://i.ibb.co/30PdX5S/1.jpg",
-            "photo3": "https://i.ibb.co/K0jHcBs/LG-AI-Research-LG-Tech-confernce-2023-thumb-cf973b521.png"
+            "photo1": "https://i.ibb.co/K0jHcBs/LG-AI-Research-LG-Tech-confernce-2023-thumb-cf973b521.png"
         }
     }
 ]

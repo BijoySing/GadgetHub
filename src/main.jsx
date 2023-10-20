@@ -17,6 +17,7 @@ import Blogs from './Layout/blogs/Blogs';
 import About from './Layout/about/About';
 import FAQ from './Layout/faq/FAQ';
 import AllServices from './Layout/allServices/AllServices';
+import ProductInfo from './components/ProductInfo';
 
 const router = createBrowserRouter([
   {
@@ -74,9 +75,14 @@ const router = createBrowserRouter([
         )
       },
       {
-        path: 'updateProducts/:id',
+       path: 'productinfo/:id',
+
+        element:<ProductInfo></ProductInfo>
+      },
+      {
+        path: 'updateproducts/:id',
         element: <UpdateProducts></UpdateProducts>,
-        loader:({params})=>fetch(`https://gadgetshub-hp4ccu54a-bijoys-projects.vercel.app/products/${params.id}`)
+        // loader:({params})=>fetch(`https://gadgetshub-hp4ccu54a-bijoys-projects.vercel.app/products/${params.id}`)
       },
       // {
       //   path: '/updateProducts/:id', // Added a missing slash before 'updateProducts'

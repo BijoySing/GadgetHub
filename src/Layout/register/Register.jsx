@@ -67,7 +67,8 @@ const Register = () => {
             })
             .catch(error => {
                 console.log(error);
-                // setRegisterError(error.message);
+                
+                setRegisterError(error.message);
                // setRegisterError(error.message); // Set the error message
 
             })
@@ -76,10 +77,10 @@ const Register = () => {
         <div>
 <h1></h1>
             <div className="bg-gray-100 min-h-screen flex items-center flex-col justify-center">
-<h1 className='text-4xl'>Registration from</h1>
+<h1 className='text-4xl font-bold mb-4'>Registration from</h1>
                 <div className="bg-white p-8 rounded shadow-md w-96">
                     {
-                        // registerError && toast.error(registerError)
+                        registerError && toast.error(registerError)
 
                     }
                     {
