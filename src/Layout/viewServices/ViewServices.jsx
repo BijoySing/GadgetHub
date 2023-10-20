@@ -83,7 +83,18 @@ const ViewServices = () => {
             ))} */}
                 <h1 className="text-6xl text-blue-800 my-4 font-bold">{brandName} Gadgets</h1>
                 <hr />
-             
+                <div className="carousel w-full h-[70vh]">
+                    {bannerImages.map((image, index) => (
+                        <div key={index} id={`slide${index + 1}`} className={`carousel-item relative w-full ${index === 0 ? 'active' : ''}`}>
+                            <img src={image} className="w-full" alt={`Slide ${index + 1}`} />
+                            <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
+                                <a href={`#slide${index === 0 ? bannerImages.length : index}`} className="btn btn-circle">❮</a>
+                                <a href={`#slide${index === 0 ? bannerImages.length : index}`} className="btn btn-circle">❯</a>
+                                {/* <a href={`#slide${index === bannerImages.length - 1 ? 0 : index }`} className="btn btn-circle">❯</a> */}
+                            </div>
+                        </div>
+                    ))}
+                </div>
 
             </div>
             <hr />
