@@ -1,33 +1,62 @@
 [
     {
-      "id": 1,
-      "name": "Apple",
-      "image": "https://i.ibb.co/42r7T2Q/apple.png"
+        "id": 1,
+        "name": "Apple",
+        "image": "https://i.ibb.co/42r7T2Q/apple.png",
+        "banner": {
+            "photo1": "https://i.ibb.co/1zQgRwq/4.jpg",
+            "photo2": "https://i.ibb.co/N9ctp61/a2.jpg",
+            "photo3": "https://i.ibb.co/3CHQ1gd/a1.jpg"
+        }
     },
     {
-      "id": 2,
-      "name": "Samsung",
-      "image": "https://i.ibb.co/Fm0qz0C/sam.jpg"
+        "id": 2,
+        "name": "Samsung",
+        "image": "https://i.ibb.co/Fm0qz0C/sam.jpg",
+        "banner": {
+            "photo1": "https://i.ibb.co/Dkgvggz/s3.jpg",
+            "photo2": "https://i.ibb.co/tpNjNmt/s2.jpg",
+            "photo3": "https://i.ibb.co/7vWZBDd/s1.jpg"
+        }
     },
     {
-      "id": 3,
-      "name": "Sony",
-      "image": "https://i.ibb.co/z5rbWzK/sony.png"
+        "id": 3,
+        "name": "Sony",
+        "image": "https://i.ibb.co/z5rbWzK/sony.png",
+        "banner": {
+            "photo1": "https://i.ibb.co/9GPLHD3/3.jpg",
+            "photo2": "https://i.ibb.co/FwG1X2p/2.jpg",
+            "photo3": "https://i.ibb.co/1JkMhhh/1.jpg"
+        }
     },
     {
-      "id": 4,
-      "name": "Xiaomi",
-      "image": "https://i.ibb.co/LtRwLW2/mi.png"
+        "id": 4,
+        "name": "Xiaomi",
+        "image": "https://i.ibb.co/LtRwLW2/mi.png",
+        "banner": {
+            "photo1": "https://i.ibb.co/R4XN9c8/3.jpg",
+            "photo2": "https://i.ibb.co/Vq1MRgv/1.jpg",
+            "photo3": "https://i.ibb.co/LkyXdP8/2.jpg"
+        }
     },
     {
-      "id": 5,
-      "name": "Realme",
-      "image": "https://www.livemint.com/rf/Image-621x414/LiveMint/Period2/2018/11/16/Photos/Home%20Page/GO%20(77)-kjmB--621x414@LiveMint.png"
+        "id": 5,
+        "name": "Realme",
+        "image": "https://www.livemint.com/rf/Image-621x414/LiveMint/Period2/2018/11/16/Photos/Home%20Page/GO%20(77)-kjmB--621x414@LiveMint.png",
+        "banner": {
+            "photo1": "https://i.ibb.co/w4ZN8hk/2.jpg",
+            "photo2": "https://i.ibb.co/mNn11c4/1.jpg",
+            "photo3": "https://i.ibb.co/85b60Lh/r1.png"
+        }
     },
     {
-      "id": 6,
-      "name": "LG",
-      "image": "https://i.ibb.co/y61cyZM/lg.png"
+        "id": 6,
+        "name": "LG",
+        "image": "https://i.ibb.co/y61cyZM/lg.png",
+        "banner": {
+            "photo1": "https://i.ibb.co/B3zjW1f/2.jpg",
+            "photo2": "https://i.ibb.co/30PdX5S/1.jpg",
+            "photo3": "https://i.ibb.co/K0jHcBs/LG-AI-Research-LG-Tech-confernce-2023-thumb-cf973b521.png"
+        }
     }
-  ]
-  
+]

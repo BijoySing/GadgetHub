@@ -21,7 +21,7 @@ const AddProducts = () => {
 
         // Send data to the server
         // Replace the URL with your actual server endpoint
-        fetch('http://localhost:5000/products', {
+        fetch('https://gadgetshub-hp4ccu54a-bijoys-projects.vercel.app/products', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'

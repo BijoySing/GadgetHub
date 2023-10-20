@@ -42,7 +42,7 @@ const router = createBrowserRouter([
 
         ),
         loader: () => fetch('../Brand.json'),
-        loader: () =>  fetch('http://localhost:5000/products')
+        loader: () =>  fetch('https://gadgetshub-hp4ccu54a-bijoys-projects.vercel.app/products')
 
       },
       {
@@ -76,18 +76,18 @@ const router = createBrowserRouter([
       {
         path: 'updateProducts/:id',
         element: <UpdateProducts></UpdateProducts>,
-        loader:({params})=>fetch(`http://localhost:5000/products/${params.id}`)
+        loader:({params})=>fetch(`https://gadgetshub-hp4ccu54a-bijoys-projects.vercel.app/products/${params.id}`)
       },
       // {
       //   path: '/updateProducts/:id', // Added a missing slash before 'updateProducts'
       //   element: <UpdateProducts></UpdateProducts>,
-      //   loader: ({ params }) => fetch(`http://localhost:5000/products/${params.id}`)
+      //   loader: ({ params }) => fetch(`https://gadgetshub-hp4ccu54a-bijoys-projects.vercel.app/products/${params.id}`)
       // },
 
       // }, {
       //   path: 'allservices',
       //   element: <AllServices></AllServices>,
-      //   loader: () =>  fetch('http://localhost:5000/products')
+      //   loader: () =>  fetch('https://gadgetshub-hp4ccu54a-bijoys-projects.vercel.app/products')
 
 
 

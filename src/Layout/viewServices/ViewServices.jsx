@@ -8,8 +8,21 @@ const ViewServices = () => {
     // Filter services based on the brand name from the route parameter
     const filteredServices = services.filter((service) => service.brandName === brandName);
 
-    const [brandImage, setBrandImage] = useState('');
+    // const [brandImage, setBrandImage] = useState('');
+    const [bannerImages, setBannerImages] = useState([]);
 
+    // useEffect(() => {
+    //     // Fetch the brand image from Brand.json based on brandName
+    //     fetch('../Brand.json')
+    //         .then((res) => res.json())
+    //         .then((data) => {
+    //             const brand = data.find((item) => item.name === brandName);
+    //             if (brand) {
+    //                 setBrandImage(brand.image);
+    //                 console.log();
+    //             }
+    //         });
+    // }, [brandName]);
     useEffect(() => {
         // Fetch the brand image from Brand.json based on brandName
         fetch('../Brand.json')
@@ -17,18 +30,73 @@ const ViewServices = () => {
             .then((data) => {
                 const brand = data.find((item) => item.name === brandName);
                 if (brand) {
-                    setBrandImage(brand.image);
+                    // setBrandImage(brand.image);
+
+                    // Set the banner images to a state variable
+                    const bannerImages = [
+                        brand.banner.photo1,
+                        brand.banner.photo2,
+                        brand.banner.photo3
+                    ];
+                    setBannerImages(bannerImages);
+                    // console.log(bannerImages);
                 }
             });
     }, [brandName]);
 
+
     return (
         <div>
-            <div>
+            <div className='banner'>
                 {/* Display the banner image for the brand from Brand.json */}
-                <img src={brandImage} alt={`${brandName} Banner`} />
+                {/* <img src={brandImage} alt={`${brandName} Banner`} /> */}
+                {/* //slider add here */}
+                {/* <div className="carousel w-full">
+                    <div id="slide1" className="carousel-item relative w-full">
+                        <img src="" className="w-full" />
+                        <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
+                            <a href="#slide4" className="btn btn-circle">❮</a>
+                            <a href="#slide2" className="btn btn-circle">❯</a>
+                        </div>
+                    </div>
+                    <div id="slide2" className="carousel-item relative w-full">
+                        <img src="/images/stock/photo-1609621838510-5ad474b7d25d.jpg" className="w-full" />
+                        <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
+                            <a href="#slide1" className="btn btn-circle">❮</a>
+                            <a href="#slide3" className="btn btn-circle">❯</a>
+                        </div>
+                    </div>
+                    <div id="slide3" className="carousel-item relative w-full">
+                        <img src="/images/stock/photo-1414694762283-acccc27bca85.jpg" className="w-full" />
+                        <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
+                            <a href="#slide2" className="btn btn-circle">❮</a>
+                            <a href="#slide4" className="btn btn-circle">❯</a>
+                        </div>
+                    </div>
+                   
+                </div> */}
+               
+               {/* {bannerImages.map((bannerImage, index) => (
+                <div key={index} className="banner-image">
+                    <img src={bannerImage} alt={`Banner Image ${index + 1}`} />
+                </div>
+            ))} */}
+            <h1 className="text-6xl text-blue-800 my-4 font-bold">{brandName} Gadgets</h1>
+<hr />
+<div className="carousel w-full h-[70vh]">
+    {bannerImages.map((image, index) => (
+        <div key={index} id={`slide${index + 1}`} className={`carousel-item relative w-full ${index === 0 ? 'active' : ''}`}>
+            <img src={image} className="w-full" alt={`Slide ${index + 1}`} />
+            <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
+            <a href={`#slide${index === 0 ? bannerImages.length : index}`} className="btn btn-circle">❮</a>
+            <a href={`#slide${index === 0 ? bannerImages.length : index}`} className="btn btn-circle">❯</a>
+                {/* <a href={`#slide${index === bannerImages.length - 1 ? 0 : index }`} className="btn btn-circle">❯</a> */}
             </div>
-            <h1 className="text-6xl my-4 font-bold">{brandName} Gadgets</h1>
+        </div>
+    ))}
+</div>
+
+            </div>
             <hr />
             <div className="grid lg:grid-cols-2 gap-4">
                 {filteredServices.map((service) => (
@@ -44,9 +112,9 @@ const ViewServices = () => {
                                 <h1> price: {service.price}</h1>
                                 <div className="card-actions flex justify-between">
                                     <Link to={`updateProducts/${service._id}`}>
-                                        <button  
-                                        // onClick={() => Navigate(`updateProducts/$service._id}`)}
- className="btn text-xl text--500 bg-orange-400">
+                                        <button
+                                            // onClick={() => Navigate(`updateProducts/$service._id}`)}
+                                            className="btn text-xl text--500 bg-orange-400">
                                             Update info
                                         </button>
                                     </Link>
