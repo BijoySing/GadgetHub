@@ -4,6 +4,7 @@ import { Link, Navigate, useLoaderData, useParams } from 'react-router-dom';
 const ViewServices = () => {
     const services = useLoaderData();
     const { brandName } = useParams();
+    console.log(services);
 
     // Filter services based on the brand name from the route parameter
     const filteredServices = services.filter((service) => service.brandName === brandName);
@@ -103,22 +104,28 @@ const ViewServices = () => {
                     <div key={service._id}>
                         {/* Card container with the scaling effect */}
                         <div className="m-4 card-side lg:card-side bg-gray-100 shadow-2xl large-card">
-                            <figure className="w-[200px] h-[200px]">
+                            <div className='flex justify-center'>
+                            <figure className="w-[200px] h-[200px] flex justify-center items-center">
                                 <img className="photo rounded-lg" src={service.image} alt="/" />
                             </figure>
-                            <div className="card-body bg--500">
-                                <h1 className="card-title">{service.name}</h1>
-                                <p>{service.shortDescription}</p>
-                                <h1> price: {service.price}</h1>
+                            </div>
+                            <div className="card-body bg-gray-100">
+                                <hr />
+                                <h1 className="card-title">{brandName}: {service.name}</h1>
+                                <hr></hr>
+                                <p className='text-[12px] text-gray-500'>{service.shortDescription}</p>
+                               <div className='flex justify-center font-bold'> <h1 className='text-red-500 bg-gray-300 mr-2 rounded-md px-3 py-1'> Price: {service.price}</h1>
+                                <h1 className='text-red-900 bg-gray-300 rounded-md py-2 px-3'>Rating: {service.rating}/5.0</h1></div>
+
                                 <div className="card-actions flex justify-between">
                                     <Link to={`updateProducts/${service._id}`}>
                                         <button
                                             // onClick={() => Navigate(`updateProducts/$service._id}`)}
-                                            className="btn text-xl text--500 bg-orange-400">
+                                            className="btn text-md px-3 text--500 bg-orange-400">
                                             Update info
                                         </button>
                                     </Link>
-                                    <button className="btn btn1 px-6 bg-blue-500">details</button>
+                                    <button className="btn btn1 px-9 py-2 bg-blue-500">details</button>
                                 </div>
                             </div>
                         </div>

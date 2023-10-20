@@ -112,9 +112,10 @@ const AddProducts = () => {
                                 <option value="">Select Brand</option>
                                 <option value="Apple">Apple</option>
                                 <option value="Samsung">Samsung</option>
+                                <option value="Sony">Sony</option>
                                 <option value="LG">LG</option>
                                 <option value="Google">Google</option>
-                                <option value="Intel">Intel</option>
+                                <option value="Xiaomi">Xiaomi </option>
                                 {/* Add your brand options here */}
                             </select>
                         </label>

@@ -31,13 +31,13 @@ const Header = () => {
                 Blogs
             </NavLink>
         </li> */}
-        {/* <li>
+        <li>
             <NavLink className="nava"
                 to="/faq"
             >
                 FAQ
             </NavLink>
-        </li> */}
+        </li>
         <li>
         <NavLink className="nava"
                 to="/addproducts"
