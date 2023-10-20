@@ -77,7 +77,14 @@ const router = createBrowserRouter([
       {
        path: 'productinfo/:id',
 
-        element:<ProductInfo></ProductInfo>
+        element:
+        <PrivateRoute>
+        <ProductInfo></ProductInfo>
+        </PrivateRoute>,
+                // loader:({params})=>fetch(`https://gadgetshub-hp4ccu54a-bijoys-projects.vercel.app/products/${services._id}`)
+                loader: () => fetch('https://gadgetshub-hp4ccu54a-bijoys-projects.vercel.app/products')
+
+
       },
       {
         path: 'updateproducts/:id',

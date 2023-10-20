@@ -82,7 +82,7 @@ const ViewServices = () => {
                     <img src={bannerImage} alt={`Banner Image ${index + 1}`} />
                 </div>
             ))} */}
-                <h1 className="text-6xl text-blue-800 my-4 font-bold">{brandName} Gadgets</h1>
+                <h1 className="text-2xl text-blue-800 my-4 font-bold lg:text-6xl">{brandName} Gadgets</h1>
                 <hr />
                 <div className="carousel w-full h-[70vh]">
                     {bannerImages.map((image, index) => (
@@ -127,6 +127,7 @@ const ViewServices = () => {
                                         </button>
                                     </Link>
                                     <Link to={`/ProductInfo/${service._id}`}>
+                                 
                             <button className="btn btn1  bg-blue-500">Details</button>
                         </Link>
                                 </div>
