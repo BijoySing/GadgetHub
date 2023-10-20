@@ -1,0 +1,128 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+body{
+  margin: 0px;
+
+}
+.sign{
+  border-color: aquamarine;
+  border: black 2px solid;
+  color:black;
+  padding: 25px;
+  font-size: 15px;
+  padding-bottom: 25px;
+  padding-top:16px;
+  /* background: green; */
+  /* border-radius: 10%; */
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  text-decoration: none;
+
+}
+.sign:hover{
+  color:black;
+  background-color: rgb(213, 18, 18);   
+  color: azure;
+
+}
+.sign1:hover{
+  color:black;
+  background-color: rgb(213, 18, 18);   
+  color: azure;
+
+}
+
+
+.pic{
+  border: 2px solid black;
+  padding: 1px;
+  border-radius: px;
+  margin-right:2px ;
+  font-weight: 00;
+  font-size: px;
+  background-color: rgb(226, 237, 237);
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+
+}
+.sign1{
+  border-color: aquamarine;
+  border: black 2px solid;
+  color:black;
+  padding: 15px;
+  font-size: 15px;
+  padding-bottom: 0px;
+  padding-top:0px;
+  /* background: green; */
+  /* border-radius: 10%; */
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  text-decoration: none;
+}
+.card-body{
+  margin: 0px;
+  /* color: rgb(5, 54, 54); */
+  padding: px;
+  /* padding-right: 5px; */
+  /* padding-left: 5px; */
+  padding-bottom: 10px;
+  padding-top: 0px;
+
+}
+.photo{
+  padding: 0px;
+  margin: 0px;
+}
+/* CSS for the scaling effect */
+.large-card:hover {
+  transform: scale(1);
+  transition: transform 0.1s ease-in-out;
+}
+
+.large-card:hover {
+  transform: scale(1.1); /* Scale up by 5% on hover */
+}
+
+/* Add this to your CSS stylesheet */
+.card-side {
+  /* Your existing card styles */
+  /* ... */
+
+  /* Add a CSS transition for a smooth size change */
+  transition: transform 0.3s ease-in-out; /* Adjust the duration and easing as needed */
+}
+
+/* Apply the size increase on hover */
+.card-side:hover {
+  transform: scale(1.05); /* Adjust the scale factor as needed */
+}
+.btn1{
+  text-decoration: none;
+  border:  1px solid rgb(233, 226, 226);
+  color: rgb(8, 15, 20);
+}
+.pic2{
+  position: relative;
+  right: 10px;
+  left: 120px;
+}
+.nav-link:hover {
+  color: red; /* Change this to the desired color when hovered */
+  cursor: pointer; /* Optional: Change cursor to a pointer on hover */
+}
+.nav-link:hover {
+  color: red; /* Change this to the desired color when hovered */
+  cursor: pointer; /* Optional: Change cursor to a pointer on hover */
+}
+.nava{
+  color:rgb(0, 0, 0);
+  background: #c5baba;
+  margin-right: 2px;
+  text-decoration: none;
+  font-size: small;
+  font-weight: 500;
+}
+.nava:hover{
+  color: rgb(227, 227, 234);
+  background-color: blue;
+}

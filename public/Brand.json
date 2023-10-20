@@ -1,0 +1,33 @@
+[
+    {
+      "id": 1,
+      "name": "Apple",
+      "image": "https://i.ibb.co/42r7T2Q/apple.png"
+    },
+    {
+      "id": 2,
+      "name": "Samsung",
+      "image": "https://i.ibb.co/Fm0qz0C/sam.jpg"
+    },
+    {
+      "id": 3,
+      "name": "Sony",
+      "image": "https://i.ibb.co/z5rbWzK/sony.png"
+    },
+    {
+      "id": 4,
+      "name": "Xiaomi",
+      "image": "https://i.ibb.co/LtRwLW2/mi.png"
+    },
+    {
+      "id": 5,
+      "name": "Realme",
+      "image": "https://www.livemint.com/rf/Image-621x414/LiveMint/Period2/2018/11/16/Photos/Home%20Page/GO%20(77)-kjmB--621x414@LiveMint.png"
+    },
+    {
+      "id": 6,
+      "name": "LG",
+      "image": "https://i.ibb.co/y61cyZM/lg.png"
+    }
+  ]
+  
