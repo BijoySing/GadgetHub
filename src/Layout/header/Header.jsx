@@ -48,10 +48,10 @@ const Header = () => {
         </li>
         <li>
         <NavLink className="nava"
-                to="/cart"
+                to="/blogs"
                
             >
-                Add Cart
+                Blog
             </NavLink>
         </li>
         <li>

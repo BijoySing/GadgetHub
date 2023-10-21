@@ -69,7 +69,7 @@ console.log(id);
             .then((res) => res.json())
             .then((data) => {
                 console.log(data);
-                if (data.updated) {
+                if (data) {
                     Swal.fire({
                         title: 'Success!',
                         text: 'Product Updated Successfully',
@@ -80,14 +80,14 @@ console.log(id);
             });
         
     };
-    const sweet=()=>{
-        Swal.fire({
-            title: 'Success!',
-            text: 'Product Updated Successfully',
-            icon: 'success',
-            confirmButtonText: 'Cool',
-        });
-    }
+    // const sweet=()=>{
+    //     Swal.fire({
+    //         title: 'Success!',
+    //         text: 'Product Updated Successfully',
+    //         icon: 'success',
+    //         confirmButtonText: 'Cool',
+    //     });
+    // }
 
     return (
         <div className="bg-[#F4F3F0] p-24">
@@ -205,8 +205,8 @@ console.log(id);
                         </label>
                     </div>
                 </div>
-               <button onClick={sweet}> <input type="submit" value="Update Product" className="btn btn-block bg-blue-500" />
-               </button>
+                <input type="submit" value="Update Product" className="btn btn-block bg-blue-500" />
+            
             </form>
         </div>
     );

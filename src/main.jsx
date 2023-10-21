@@ -18,6 +18,7 @@ import About from './Layout/about/About';
 import FAQ from './Layout/faq/FAQ';
 import AllServices from './Layout/allServices/AllServices';
 import ProductInfo from './components/ProductInfo';
+import AddToCart from './components/AddToCart';
 
 const router = createBrowserRouter([
   {
@@ -88,7 +89,10 @@ const router = createBrowserRouter([
       },
       {
         path: 'updateproducts/:id',
-        element: <UpdateProducts></UpdateProducts>,
+        element:
+        <PrivateRoute>
+        <UpdateProducts></UpdateProducts>
+        </PrivateRoute>,
          loader: () => fetch('https://gadgetshub-hp4ccu54a-bijoys-projects.vercel.app/products')
         // loader:({params})=> fetch(`https://gadgetshub-hp4ccu54a-bijoys-projects.vercel.app/products/${params.id}`)
       },
@@ -103,7 +107,15 @@ const router = createBrowserRouter([
       //   element: <AllServices></AllServices>,
       //   loader: () =>  fetch('https://gadgetshub-hp4ccu54a-bijoys-projects.vercel.app/products')
 
+{
+  path:'addtocart/:id',
+  element:
+  <PrivateRoute>
+    <AddToCart></AddToCart>
+  </PrivateRoute>,
+           loader: () => fetch('https://gadgetshub-hp4ccu54a-bijoys-projects.vercel.app/products')
 
+}
 
       // }
     ],

@@ -1,57 +1,105 @@
 import React from 'react';
 
-const blogPosts = [
+const gadgetData = [
     {
-        title: 'Planning the Perfect Wedding: A Step-by-Step Guide',
-        date: 'November 10, 2023',
+        title: 'Latest Smartphone Release: The Gadget Pro X',
+        date: 'October 15, 2023',
+        author: 'John Doe',
+        image: 'https://i.ibb.co/mNn11c4/1.jpg',
+        content: `
+            Introducing the Gadget Pro X, the latest addition to our smartphone lineup.
+            Packed with cutting-edge features, this device is a game-changer in the world of technology.
+            Explore the key specifications and what sets it apart from the competition.
+        `,
+    },
+    {
+        title: 'Revolutionary SmartPhones: Gadget  Series 5',
+        date: 'October 28, 2023',
         author: 'Jane Smith',
-        image: 'https://i.ibb.co/L8w324v/wedding.jpg',
+        image: 'https://images.samsung.com/bd/smartphones/galaxy-s22-ultra/images/galaxy-s22-ultra_highlights_kv_img.jpg',
         content: `
-            Planning a wedding can be both exciting and overwhelming. From choosing the perfect venue to
-            selecting the ideal wedding dress, this step-by-step guide will help you navigate the journey
-            to your dream wedding. Ensure your special day is a memorable one with expert tips and insights.
+            Get ready to experience a whole new level of smartwatches with the Gadget Watch Series 5.
+            From fitness tracking to seamless connectivity, discover how it enhances your daily life.
         `,
     },
     {
-        title: 'Throwing a Memorable Birthday Party for Kids',
-        date: 'December 5, 2023',
-        author: 'Michael Johnson',
-        image: 'https://i.ibb.co/F3CYDzF/birthday.jpg',
+        title: 'Tech Enthusiast\'s Dream: Gadget Hub VR Glasses',
+        date: 'November 10, 2023',
+        author: 'Mike Johnson',
+        image: 'https://www.durberbd.com/wp-content/uploads/2022/01/SAMSUNG-EHS61-in-ear-Earphone-Wired-with-Microphone-for-Samsung-S5830-S7562-for-xiaomi-earpiece-for.jpg_Q90.jpg_.webp',
         content: `
-            Organizing a birthday party for your child? Discover creative themes, games, and decoration ideas
-            to make your kid's birthday celebration unforgettable. From princess parties to superhero adventures,
-            we've got you covered with 100-word magic!
+            Immerse yourself in the world of virtual reality with our latest Gadget Hub VR Glasses.
+            This groundbreaking product takes entertainment and gaming to the next level.
         `,
     },
     {
-        title: 'Celebrating Love: Planning Your Anniversary Bash',
-        date: 'January 20, 2024',
+        title: 'The Ultimate Laptop: GadgetBook Pro 13',
+        date: 'November 23, 2023',
         author: 'Emily Davis',
-        image: 'https://i.ibb.co/1rD2kBg/anneversary.jpg',
+        image: 'https://i.ibb.co/3m1bt7G/y.jpg',
         content: `
-            Whether it's your first anniversary or a milestone celebration, make it special with our tips on
-            planning the perfect anniversary party. From romantic settings to meaningful gifts, it's all here
-            in a concise 100 words.
+            Meet the GadgetBook Pro 13, a powerful laptop that combines performance and portability.
+            Discover its sleek design, high-resolution display, and advanced features.
         `,
     },
     {
-        title: 'Engagement Party Ideas for the Newly Engaged',
-        date: 'February 15, 2024',
+        title: 'Stay Fit with GadgetFit 3: Fitness Tracker',
+        date: 'December 5, 2023',
         author: 'David Brown',
-        image: 'https://i.ibb.co/0ZCWnHX/Engagement.jpg',
+        image: 'https://i.etsystatic.com/32684893/r/il/136f15/3827570078/il_fullxfull.3827570078_nzbv.jpg',
         content: `
-            Your engagement is a time for celebration! Discover creative and fun ideas for your engagement party.
-            From engagement photo booths to themed decorations, let the festivities begin with this 100-word guide.
+            Achieve your fitness goals with the GadgetFit 3 Fitness Tracker. Track your activities,
+            monitor your health, and stay motivated with this versatile wearable device.
         `,
     },
     {
-        title: 'Welcoming a New Chapter: Baby Shower Planning',
-        date: 'March 10, 2024',
+        title: 'Smart Home Revolution: GadgetHome Automation',
+        date: 'December 18, 2023',
         author: 'Sarah Wilson',
-        image: 'https://i.ibb.co/2gsFk3m/Baby-shower.jpg',
+        image: 'https://m.media-amazon.com/images/I/71LRY1j6UHL._AC_UF1000,1000_QL80_.jpg',
         content: `
-            Preparing for a baby shower? Explore our guide to planning the perfect event for the mom-to-be.
-            From baby shower themes to adorable decorations, ensure a memorable celebration in 100 words or less.
+            Transform your home into a smart and connected space with GadgetHome Automation.
+            Control lights, security, and more with your smartphone or voice commands.
+        `,
+    },
+    {
+        title: 'Capture Memories with GadgetCam X: DSLR Camera',
+        date: 'January 8, 2024',
+        author: 'Mark Anderson',
+        image: 'https://i.ibb.co/mNn11c4/1.jpg',
+        content: `
+            Elevate your photography with the GadgetCam X DSLR Camera. Explore its features,
+            lens options, and capture stunning photos and videos.
+        `,
+    },
+    {
+        title: 'Gaming Excellence: GadgetConsole Pro',
+        date: 'January 20, 2024',
+        author: 'Sophia Lee',
+        image: 'https://i.ibb.co/mNn11c4/1.jpg',
+        content: `
+            Experience gaming like never before with the GadgetConsole Pro. Enjoy realistic graphics,
+            fast performance, and a wide range of gaming titles.
+        `,
+    },
+    {
+        title: 'GadgetHub Pro: Your Tech Companion',
+        date: 'February 12, 2024',
+        author: 'Chris Martin',
+        image: 'https://cdn3.vox-cdn.com/uploads/chorus_asset/file/3459516/vs02-23_1525cxs.0.png',
+        content: `
+            Explore the GadgetHub Pro, a hub of all things tech. Stay updated on the latest gadgets,
+            reviews, and tech news with our comprehensive platform.
+        `,
+    },
+    {
+        title: 'Audio Revolution: GadgetSound Pro Earbuds',
+        date: 'February 26, 2024',
+        author: 'Lucy Turner',
+        image: 'https://i.ibb.co/NT9yPtV/z.jpg',
+        content: `
+            Immerse yourself in music with the GadgetSound Pro Earbuds. Enjoy high-quality sound,
+            noise cancellation, and a comfortable fit for a premium audio experience.
         `,
     },
 ];
@@ -59,9 +107,9 @@ const blogPosts = [
 const Blogs = () => {
     return (
         <div className="container mx-auto mt-8 px-4">
-            <h1 className="text-3xl font-semibold mb-6">Recent Blog Posts</h1>
+            <h1 className="text-3xl font-semibold mb-6">Latest from Gadget Hub</h1>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                {blogPosts.map((post, index) => (
+                {gadgetData.map((post, index) => (
                     <div className="bg-white rounded-lg shadow-lg overflow-hidden" key={index}>
                         <img src={post.image} alt={post.title} className="w-full h-40 object-cover" />
                         <div className="p-6">

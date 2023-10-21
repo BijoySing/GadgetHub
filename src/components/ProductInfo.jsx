@@ -1,5 +1,6 @@
 import React from 'react';
-import { useLoaderData, useLocation, useParams } from 'react-router-dom';
+import { Link, useLoaderData, useLocation, useParams } from 'react-router-dom';
+import Swal from 'sweetalert2';
 
 const ProductInfo = () => {
     // const location = useLocation();
@@ -10,6 +11,14 @@ const ProductInfo = () => {
     const service = services.find(service => service._id === id);
     console.log(service);
     console.log(id);
+    const sweet =()=>{
+        Swal.fire({
+                    title: 'Success!',
+                    text: 'Cart added Successfully',
+                    icon: 'success',
+                    confirmButtonText: 'Cool',
+                });
+    }
 
 
     return (
@@ -34,7 +43,10 @@ const ProductInfo = () => {
                                 <h1 className='text-red-900 bg-gray-100 rounded-md py-2 px-3'>Rating: {service.rating}/5.0</h1></div>
               
                     <div>
-                        <button className='btn w-full mb-4  px-30 bg-orange-600'>Add to cart</button>
+                        <Link to={`/AddToCart/${id}`}>
+                                 
+                        <button onClick={sweet} className='btn w-full mb-4  px-30 bg-orange-600'>Add to cart</button>
+                             </Link>
                     </div>
 
                 </div>
