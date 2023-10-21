@@ -89,7 +89,8 @@ const router = createBrowserRouter([
       {
         path: 'updateproducts/:id',
         element: <UpdateProducts></UpdateProducts>,
-        // loader:({params})=>fetch(`https://gadgetshub-hp4ccu54a-bijoys-projects.vercel.app/products/${params.id}`)
+         loader: () => fetch('https://gadgetshub-hp4ccu54a-bijoys-projects.vercel.app/products')
+        // loader:({params})=> fetch(`https://gadgetshub-hp4ccu54a-bijoys-projects.vercel.app/products/${params.id}`)
       },
       // {
       //   path: '/updateProducts/:id', // Added a missing slash before 'updateProducts'
