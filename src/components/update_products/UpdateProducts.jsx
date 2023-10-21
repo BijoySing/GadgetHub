@@ -5,7 +5,7 @@ import { useLoaderData, useParams } from 'react-router-dom';
 const UpdateProduct = () => {
     const products = useLoaderData();
     const { id } = useParams();
-// console.log(id);
+console.log(id);
 
     // if (!products) {
     //     return <div>Loading...</div>;
@@ -38,18 +38,37 @@ const UpdateProduct = () => {
             rating,
             image,
         };
+        console.log(updatedProduct);
+        fetch(`https://gadgetshub-e5tzljj10-bijoys-projects.vercel.app/products/${_id}`, {
+            method: 'PUT',
+            headers: {
+                'content-type': 'application/json'
+            },
+            body: JSON.stringify(updatedProduct)
+        })
+            // .then(res => res.json())
+            // .then(data => {
+            //     console.log(data);
+
+            // })
+
+    //  fetch('http://localhost:5000/products')
+	// .then(response => response.json())
+	// .then(data => console.log(data))
 
         // Send data to the server for updating the product
         // Replace the URL with your actual server endpoint
-        fetch(`https://gadgetshub-hp4ccu54a-bijoys-projects.vercel.app/products/${id}`, {
-            method: 'PUT',
-            headers: {
-                'Content-Type': 'application/json',
-            },
-            body: JSON.stringify(updatedProduct),
-        })
+        // fetch(`http://localhost:5000/products/${id}`, {
+        //     // fetch(`http://localhost:5000/`)
+        //     method: 'PUT',
+        //     headers: {
+        //         'content-type': 'application/json'
+        //     },
+        //     body: JSON.stringify({updatedProduct}),
+        // })
             .then((res) => res.json())
             .then((data) => {
+                console.log(data);
                 if (data.updated) {
                     Swal.fire({
                         title: 'Success!',
@@ -59,7 +78,16 @@ const UpdateProduct = () => {
                     });
                 }
             });
+        
     };
+    const sweet=()=>{
+        Swal.fire({
+            title: 'Success!',
+            text: 'Product Updated Successfully',
+            icon: 'success',
+            confirmButtonText: 'Cool',
+        });
+    }
 
     return (
         <div className="bg-[#F4F3F0] p-24">
@@ -177,7 +205,8 @@ const UpdateProduct = () => {
                         </label>
                     </div>
                 </div>
-                <input type="submit" value="Update Product" className="btn btn-block bg-blue-500" />
+               <button onClick={sweet}> <input type="submit" value="Update Product" className="btn btn-block bg-blue-500" />
+               </button>
             </form>
         </div>
     );

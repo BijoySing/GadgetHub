@@ -4,16 +4,17 @@ import AllServices from '../allServices/AllServices';
 import DetailsServices from '../services/DetailsServices';
 import FAQ from '../faq/FAQ';
 import About from '../about/About';
+import ThemeToggle from '../../components/ThemeToggle';
 
 const Home = () => {
     return (
         <div>
+
             <Banner></Banner>
             <AllServices></AllServices>
             <DetailsServices></DetailsServices>
             <FAQ></FAQ>
             <About></About>
-            
             
         </div>
     );
